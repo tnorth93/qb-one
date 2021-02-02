@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const QbOne = props => {
-	return (
-		<p>Yo</p>
-	)
+import axios from '../axios-players.js';
+
+
+class QbOne extends Component {
+	
+	componentDidMount() {
+		axios.get('/users.json')
+			.then(res => {
+				console.log(res.data);
+			})
+	}
+
+	render() {
+		return (
+			// <Players />
+			<p>i</p>
+		)
+	}
 }
 
 export default QbOne;
